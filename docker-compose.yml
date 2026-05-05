@@ -1,0 +1,10 @@
+services:
+  app-analise:
+    build: .
+    container_name: unmp-challenge-app
+    volumes:
+      # Mapeia o diretório local para o container para leitura do data.json
+      # e gravação do result.json na sua máquina local
+      - .:/app
+    stdin_open: true
+    tty: true
